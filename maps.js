@@ -3,7 +3,7 @@ const emojis={
 'O':'🚪​​​​',
 'X':'💣',
 'I':'🍨​​',
-'PLAYER':'🐧​',
+'PLAYER':'☃️​​',
 'BOMB_COLLISION':'🔥',
 'GAME_OVER':'👎',
 'WIN':'🏆',

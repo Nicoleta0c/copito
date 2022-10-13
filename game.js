@@ -267,5 +267,3 @@ function moveDown() {
   startGame();
  }}
 
- //elementSize con lo que empiezo el juego
- //canvasSize con lo que termino el juego (el final del canvas)
