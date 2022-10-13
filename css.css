@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  background-size: 100% 94%;
+  background-position: 0px 0px;
+  background-color:rgba(69, 83, 193, 0.785);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+canvas {
+  border: 4px solid solid;
+  box-shadow:19px 20px 8px -9px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-size: 100% 94%;
+  background-position: 0px 0px;
+  background-color:#0f111d;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+}
+
+  
+
+button{
+  background:#0786fe;
+  border-radius: 8px;
+  border-color: rgb(53, 46, 242);
+  font-family: inherit;
+  color:#fff;
+  margin: 0;
+  margin-top:20px;
+  padding: 5px 20px;
+  width: 100px;
+  
+}
+button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.messages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 460px;
+}
+
+p {
+  display: block;
+  margin: 0;
+  width: 100%;
+  color:#fff;
+  
+}
+
+@media (max-width: 440px) {
+  button { margin-top: 5px; }
+  #up, #down { margin-left: 100%; margin-right: 100%; }
+}
