@@ -173,13 +173,13 @@ function startGame() {
  if (recordTime) {
   if (recordTime >= playerTime) {
     localStorage.setItem('record_time', playerTime);
-    pResult.innerHTML = 'SUPERASTE EL RECORD :)';
+    pResult.innerHTML = 'SUPERASTE EL RECORD :3';
   } else {
-    pResult.innerHTML = 'lo siento, no superaste el records :(';
+    pResult.innerHTML = 'no superaste el records :(';
   }
 } else {
   localStorage.setItem('record_time', playerTime);
-  pResult.innerHTML = 'Primera vez? Muy bien, pero ahora trata de superar tu tiempo :)';
+  pResult.innerHTML = 'Es tu primera vez!! ahora vuelve a intentarlo y rompe tu record';
 }
 
 console.log({recordTime, playerTime});
