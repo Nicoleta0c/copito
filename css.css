@@ -176,17 +176,17 @@ color: #ffffff;
   .viewport{
     width: 40rem;
     height: 38rem;
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   .details{
     width: 400px;
-    height:200px;
+    height:220px;
     margin-top: 25px;
   }
 
 .btn-wrapper{
-  margin-right: 100px;
+  margin: 100%;
 }
 
   .score-label > p{
@@ -219,8 +219,8 @@ color: #ffffff;
 
   .details{
     width: 350px;
-    height:210px;
-    margin-top: 15px;
+    height:220px;
+    margin-top: 5px;
   }
 
   .btn-wrapper{
