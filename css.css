@@ -176,13 +176,13 @@ color: #ffffff;
   .viewport{
     width: 40rem;
     height: 38rem;
-    margin-top: 5px;
+    margin: auto;
   }
 
   .details{
     width: 400px;
     height:220px;
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
 .btn-wrapper{
@@ -215,12 +215,13 @@ color: #ffffff;
   .viewport{
     width: 33rem;
     height: 33rem;
+    margin: auto;
   }
 
   .details{
     width: 350px;
     height:220px;
-    margin-top: 5px;
+    margin-top: 30px;
   }
 
   .btn-wrapper{
