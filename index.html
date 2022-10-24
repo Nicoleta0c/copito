@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css.css">
-  <title>copito</title>
-</head>
-<body>
-  <div class="game-container">
-    <canvas id="game"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css.css" />
+    <title>copito</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="viewport">
+        <canvas id="game"></canvas> 
+      </section>
+      <section class="details">
+        <div class="content">
+          <section class="scores-wrapper">
+            <label class="score-label">
+              <p>Vida</p>
+              <p id="lives">* * *</p>
+            </label>
+            <label class="score-label">
+              <p>Tiempo</p>
+              <p id="time">* * *</p>
+            </label >
+            <label class="score-label">
+              <p>Record</p>
+              <p id="record">* * *</p>
+            </label >
+            <label class="score-label">
+              <p>resultado</p>
+              <p id="result">❄️​</p>
+            </label>
+          </section>
+          <section class="btn-wrapper">
+            <section class="left btn" id="left">
+              <i class="fas fa-caret-left"></i>
+            </section>
+            <section class="up btn" id="up">
+              <i class="fas fa-caret-up"></i>
+            </section>
+            <section class="down btn" id="down">
+              <i class="fas fa-caret-down"></i>
+            </section>
+            <section class="rigth btn" id="rigth">
+              <i class="fas fa-caret-right"></i>
+            </section>
+          </section>
+        </div>
+        <div>
+          <button class="reset" id="reset">RESTART</button>
+        </div>
+      </section>
+    </div>
     
-    <div class="btns">
-      <button id="up">UP</button>
-      <button id="left">LEFT</button>
-      <button id="right">RIGHT</button>
-      <button id="down">DOWN</button>
-    </div>
-
-    <div class="messages">
-      <p>Vidas: <span id="lives"></span></p>
-      <p>Tiempo: <span id="time"></span></p>
-      <p>Record: <span id="record"></span></p>
-      <p id="result"></p>
-    </div>
-  </div>
-
   <script src="./maps.js"></script>
   <script src="./game.js"></script>
-</body>
+  </body>
 </html>

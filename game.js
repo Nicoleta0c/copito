@@ -1,8 +1,9 @@
 const canvas = document.querySelector('#game');
+const viewport = document.querySelector('.viewport');
 const game = canvas.getContext('2d');
 const btnUp = document.querySelector('#up');
 const btnLeft = document.querySelector('#left');
-const btnRight = document.querySelector('#right');
+const btnRight = document.querySelector('#rigth');
 const btnDown = document.querySelector('#down');
 const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
@@ -16,7 +17,7 @@ let level = 0;
 let lives = 3;
 let timeStart;
 let timePlayer;
-let  timeInterval;
+let timeInterval;
 
 const playerposition = {
   x: undefined,
@@ -31,13 +32,12 @@ const creamPosition = {
 let enemyPosition = [
 ];
 
-
 window.addEventListener('load', setCanvasSize);
-window.addEventListener('resize', setCanvasSize);
 
 function setCanvasSize() {
-  window.innerHeight > window.innerWidth ?  canvasSize = window.innerWidth * 0.75 : canvasSize = window.innerHeight * 0.75;
-   
+  canvasSize = viewport.offsetHeight
+  console.log(viewport.offsetHeight);
+  console.dir(canvasSize);
   canvasSize = Number(canvasSize.toFixed(3));
 
   canvas.setAttribute('width', canvasSize);
@@ -50,7 +50,6 @@ function setCanvasSize() {
   startGame();}
 
 function startGame() {
- 
 
   game.font = elementsSize + 'px Roboto';
   game.textAlign = 'end';
@@ -110,6 +109,7 @@ function startGame() {
     //starGamer llamara esta funcion una vez que borre todo con clearRect
     //siempre que llame movePlayer el jugador se movera y no borrara nada
      movePlayer();
+
   }
 
   function movePlayer() {
@@ -122,7 +122,8 @@ function startGame() {
       console.log('Subiste de nisvel!');
       advance()
     }
-   
+
+
     const enemyCollision = enemyPosition.find(enemy => {
      const enemyCollisionX = enemy.x.toFixed(3) == playerposition.x.toFixed(3)
      const enemyCollisionY = enemy.y.toFixed(3) == playerposition.y.toFixed(3)
@@ -135,7 +136,6 @@ function startGame() {
    
     
     game.fillText(emojis['PLAYER'], playerposition.x , playerposition.y);
-  
   }
 
   function advance() {
@@ -150,7 +150,7 @@ function startGame() {
   function levelFail() {
    lives--;
    console.log("me choque")
-    
+     
     if(lives <= 0){
       level = 0;
       lives = 3;
@@ -160,26 +160,27 @@ function startGame() {
     playerposition.x = undefined;
     playerposition.y = undefined;
     startGame();
+
+  
   }
 
 //logica de los juegos
   function gameWin() {
-   //location.reload();
   clearInterval(timeInterval)
 
  const recordTime = localStorage.getItem('record_time');
- const playerTime = Date.now() - timeStart
+ const playerTime = Date.now() - timeStart;
  
  if (recordTime) {
   if (recordTime >= playerTime) {
     localStorage.setItem('record_time', playerTime);
-    pResult.innerHTML = 'SUPERASTE EL RECORD :3';
+    pResult.textContent = 'SUPERASTE EL RECORD :3';
   } else {
-    pResult.innerHTML = 'no superaste el records :(';
+    pResult.textContent = 'no superaste el records :(';
   }
 } else {
   localStorage.setItem('record_time', playerTime);
-  pResult.innerHTML = 'Es tu primera vez!! ahora vuelve a intentarlo y rompe tu record';
+  pResult.textContent = 'Es tu primera vez!! ahora vuelve a intentarlo y rompe tu record';
 }
 
 console.log({recordTime, playerTime});
@@ -197,6 +198,7 @@ function showTime() {
 function showRecord() {
   spanRecord.textContent = localStorage.getItem('record_time');
 }
+
 
 btnUp.addEventListener("click", moveUp);
 btnLeft.addEventListener("click", moveLeft);
@@ -267,3 +269,9 @@ function moveDown() {
   startGame();
  }}
 
+
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', resetGame);
+ function resetGame() {
+  location.reload();
+} 
