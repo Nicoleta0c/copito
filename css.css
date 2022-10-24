@@ -171,6 +171,7 @@ color: #ffffff;
   .container{
     display: flex;
     flex-direction:column;
+    overflow: hidden;
   }
 
   .viewport{
@@ -210,6 +211,7 @@ color: #ffffff;
   .container{
     display: flex;
     flex-direction:column;
+    overflow: hidden;
   }
 
   .viewport{
