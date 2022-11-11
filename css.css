@@ -86,8 +86,8 @@ div.content>section.btn-wrapper>section.btn:hover {
 
 div.content>section.btn-wrapper>section.btn:active {
   transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  width: calc(3em + 20%);
-  height: calc(3em + 20%);
+ /* width: calc(3em + 20%);
+  height: calc(3em + 20%);*/
 }
 
 div.content>section.btn-wrapper>section.btn.left {
